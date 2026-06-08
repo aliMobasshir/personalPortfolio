@@ -2,8 +2,10 @@ import React from 'react'
 import { cookies } from 'next/headers'
 import NotchNav from '@/components/layout/NotchNav'
 import SideNav from '@/components/layout/SideNav'
+import SmoothScroll from "@/components/SmoothScroll"
 import "./globals.css";
 import { Geist, Orbitron, Space_Grotesk , Poiret_One } from "next/font/google";
+
 
 import { cn } from "@/lib/utils";
 
@@ -26,8 +28,8 @@ const poiret = Poiret_One({
 });
 
 export const metadata = {
-    title: "Mobasshir Portfolio",
-    description: "My developer portfolio",
+    title: "Md Mobasshir Ali Portfolio",
+    description: "Portfolio of Md Mobasshir Ali, a Full Stack Developer specializing in React, Next.js, JavaScript, Node.js, and modern web applications. Explore projects, skills, and experience.",
 };
 
 const RootLayout = async ({ children }) => {
@@ -43,19 +45,15 @@ const RootLayout = async ({ children }) => {
             style={{ colorScheme: isDark ? "dark" : "light" }}
         >
             <body className="min-h-screen bg-background text-foreground transition-colors duration-300 ">
+            <SmoothScroll>
                 <div className='flex min-h-screen'>
                     <SideNav></SideNav>
                     <div className='flex min-w-0 flex-1 flex-col'>
                         <NotchNav initialTheme={theme}></NotchNav>
-
                         {children}
-
-
-                       
                     </div>
                 </div>
-
-
+            </SmoothScroll>
             </body>
         </html>
 

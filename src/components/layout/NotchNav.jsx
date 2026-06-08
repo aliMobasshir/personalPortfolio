@@ -50,7 +50,7 @@ export default function NotchNav({ initialTheme }) {
     },
   ];
   return (
-    <div className="fixed inset-x-0 top-4 z-10 flex justify-center px-4 sm:top-6">
+    <div className="fixed inset-x-0 top-4 z-15 flex justify-center px-4 sm:top-6">
       <FloatingDock
         
         items={links} />
