@@ -6,6 +6,7 @@ import { easeInOut, motion } from 'motion/react';
 import { Particles } from '../ui/particles';
 import HoverBorderGradientOTW from '../ui/hover-border-gradient-OTW';
 import { usePageRestore } from '@/lib/use-page-restore';
+import Link from 'next/link';
 
 const variants = {
   hidden : {
@@ -108,9 +109,10 @@ const Hero = () => {
         />
       </div>
 
-      <InvertButton className="mt-8 w-fit text-xs sm:text-sm">
+     <Link href="#contact">
+     <InvertButton className="mt-8 w-fit text-xs sm:text-sm">
         Contact Me
-      </InvertButton>
+      </InvertButton></Link> 
 
       
       </motion.div>
