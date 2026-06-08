@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import { easeInOut, motion, stagger } from "motion/react";
+import { easeInOut, motion } from "motion/react";
 import { usePageRestore } from "@/lib/use-page-restore";
 
 const About = () => {
@@ -47,9 +47,21 @@ const paragraphVariant = {
   },
 };
 
-const revealProps = restored
+const headingRevealProps = restored
   ? { initial: false, animate: "visible" }
-  : { initial: "hidden", whileInView: "visible", viewport: { once: true, amount: 0.5 } };
+  : {
+      initial: "hidden",
+      whileInView: "visible",
+      viewport: { once: true, amount: 0.65, margin: "0px 0px -8% 0px" },
+    };
+
+const paragraphRevealProps = restored
+  ? { initial: false, animate: "visible" }
+  : {
+      initial: "hidden",
+      whileInView: "visible",
+      viewport: { once: true, amount: 0.55, margin: "0px 0px -10% 0px" },
+    };
 
   return (
     <section id="about"
@@ -70,7 +82,7 @@ const revealProps = restored
       {/* Heading */}
       <motion.div 
      variants={containerVariant}
-     {...revealProps}
+     {...headingRevealProps}
       className="flex items-center gap-3 sm:gap-6 ">
         <motion.h1
           variants={itemVariant}
@@ -110,9 +122,10 @@ const revealProps = restored
           max-w-5xl
         "
       >
-        <motion.p variants={paragraphVariant}
-  {...revealProps}
-  >
+        <motion.p
+          variants={paragraphVariant}
+          {...paragraphRevealProps}
+        >
   <span
     className="
       inline-block
@@ -132,18 +145,20 @@ const revealProps = restored
   into products people love using.
 </motion.p >
 
-<motion.p variants={paragraphVariant}
-  {...revealProps}
-  >
+<motion.p
+  variants={paragraphVariant}
+  {...paragraphRevealProps}
+>
   I&apos;m currently pursuing my degree while building web applications with React,
   Next.js, Node.js, and modern backend technologies. I enjoy working across the
   stack, from crafting polished user interfaces to designing scalable backend
   systems.
 </motion.p >
 
-<motion.p variants={paragraphVariant}
-  {...revealProps}
-  >
+<motion.p
+  variants={paragraphVariant}
+  {...paragraphRevealProps}
+>
   I love solving real-world problems through technology and bringing ideas to
   life through code. Whether it&apos;s a social platform, an AI-powered tool, or a
   full-stack application, I&apos;m always excited to build and learn.
@@ -155,9 +170,10 @@ const revealProps = restored
   constantly learning and pushing myself to become a better engineer.
 </p> */}
 
-<motion.p variants={paragraphVariant}
-  {...revealProps}
-  >
+<motion.p
+  variants={paragraphVariant}
+  {...paragraphRevealProps}
+>
   I&apos;m graduating in 2026 and actively looking for opportunities to contribute,
   grow, and build meaningful products alongside talented teams.
 </motion.p >
