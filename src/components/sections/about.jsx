@@ -52,7 +52,15 @@ const headingRevealProps = restored
   : {
       initial: "hidden",
       whileInView: "visible",
-      viewport: { once: true, amount: 0.65, margin: "0px 0px -8% 0px" },
+      viewport: { once: true, amount: 0.72, margin: "0px 0px -12% 0px" },
+    };
+
+const firstParagraphRevealProps = restored
+  ? { initial: false, animate: "visible" }
+  : {
+      initial: "hidden",
+      whileInView: "visible",
+      viewport: { once: true, amount: 0.65, margin: "0px 0px -12% 0px" },
     };
 
 const paragraphRevealProps = restored
@@ -60,7 +68,7 @@ const paragraphRevealProps = restored
   : {
       initial: "hidden",
       whileInView: "visible",
-      viewport: { once: true, amount: 0.55, margin: "0px 0px -10% 0px" },
+      viewport: { once: true, amount: 0.55 },
     };
 
   return (
@@ -124,7 +132,7 @@ const paragraphRevealProps = restored
       >
         <motion.p
           variants={paragraphVariant}
-          {...paragraphRevealProps}
+          {...firstParagraphRevealProps}
         >
   <span
     className="
