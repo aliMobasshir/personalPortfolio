@@ -27,8 +27,8 @@ const projectsdata = [
     {
       title: "Cashew-AI",
       description: "Gemini SDK based AI chat Application with appwrite baas",
-      github: "https://github.com/aliMobasshir/zoMeels",
-      live: "https://zo-meels.vercel.app/",
+      github: "https://github.com/aliMobasshir/cashewAi",
+      live: "https://cashew-smoky.vercel.app/",
       preview: "/images/projects/CashewAIPreview.png", techStack: ["React", "Tailwind", "Gemini SDK", "Appwrite", ],
     },
 ];
