@@ -147,12 +147,16 @@ export default function ThreeDCardImplemented() {
       };
 
   return (
-    <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+    <div
+      className="grid justify-items-center gap-4 sm:gap-6"
+      style={{ gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 22rem), 1fr))" }}
+    >
       {projectsdata.map((item) => (
         <motion.div
           key={item.title}
           {...revealProps}
           transition={{ duration: 0.6, ease: easeInOut }}
+          className="w-full flex justify-center"
         >
           <CardContainer className="inter-var">
             <CardBody className="group/card relative h-auto w-full max-w-[22rem] border border-black/[0.1] bg-gray-50 p-4 dark:border-white/[0.2] dark:bg-black dark:hover:shadow-2xl dark:hover:shadow-orange-500/[0.1] sm:max-w-[30rem] sm:p-6">
