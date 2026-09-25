@@ -46,7 +46,7 @@ export default function NotchNav({ initialTheme }) {
       icon: (
         <InvertButton  >MY RESUME</InvertButton>
       ),
-      href: "https://drive.google.com/file/d/1HdtChtR4JWHrpV1fcfOLm5pPsPZGBI_v/view?usp=drive_link",
+      href: "https://drive.google.com/file/d/16LQS1ci0M8spdCSerNCo0bhoVW-rWoOW/view?usp=sharing",
     },
   ];
   return (
